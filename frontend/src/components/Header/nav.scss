@@ -1,0 +1,35 @@
+.navbar-container {
+  background: rgb(237, 133, 29);
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  nav {
+    ul {
+      width: 100%;
+      // margin-left: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+
+      li {
+        a {
+          text-decoration: none;
+        }
+        font-size: 1.3rem;
+        padding: 0 1rem;
+        list-style: none;
+
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        list-style: none;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
