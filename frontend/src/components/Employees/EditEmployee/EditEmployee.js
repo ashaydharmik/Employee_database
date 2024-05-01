@@ -54,7 +54,7 @@ const navigate = useNavigate();
     const headers = {
       Authorization: `Bearer ${userToken}`,
     };
-      axios.get(`http://localhost:4000/fetchSingleEmployee/${params.id}`,{headers})
+      axios.get(`https://employee-database-9v1y.onrender.com/fetchSingleEmployee/${params.id}`,{headers})
       .then((res)=>{
         setEmpData({
           ...res.data.availableEmployee,
@@ -74,7 +74,7 @@ const navigate = useNavigate();
     const headers = {
       Authorization: `Bearer ${userToken}`,
     };
-    axios.put(`http://localhost:4000/updateEmployee/${params.id}`,empData,{headers})
+    axios.put(`https://employee-database-9v1y.onrender.com/updateEmployee/${params.id}`,empData,{headers})
     .then((res)=>{
         setEmpData(res.data.availableEmployee)
         console.log("Employee updated")

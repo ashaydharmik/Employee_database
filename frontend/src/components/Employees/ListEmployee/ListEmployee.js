@@ -21,7 +21,7 @@ const ListEmployee = () => {
         Authorization: `Bearer ${userToken}`,
       };
       axios
-      .get("http://localhost:4000/allEmployee", {headers})
+      .get("https://employee-database-9v1y.onrender.com/allEmployee", {headers})
       .then((res) => {
         setShowAllEmp(res.data);
         console.log(res.data);
@@ -38,7 +38,7 @@ const ListEmployee = () => {
       const headers = {
         Authorization: `Bearer ${userToken}`,
       };
-        axios.delete(`http://localhost:4000/deleteEmployee/${id}`,{headers})
+        axios.delete(`https://employee-database-9v1y.onrender.com/deleteEmployee/${id}`,{headers})
         .then(() => {
             handleShowEmp();
          toast.success("Employee Successfully Deleted!")
@@ -57,7 +57,7 @@ const ListEmployee = () => {
           Authorization: `Bearer ${userToken}`,
         };
         if(key){
-          axios.get(`http://localhost:4000/search/${key}`, {headers})
+          axios.get(`https://employee-database-9v1y.onrender.com/search/${key}`, {headers})
           .then((res)=>{
             setShowAllEmp(res.data)
               console.log(res.data)
@@ -112,7 +112,7 @@ const ListEmployee = () => {
                 <tr key={emp._id}>
                   <td>{emp._id}</td>
                   <td> 
-                  <img src={`http://localhost:4000/uploads/${emp.image}`} alt="Employee" />
+                  <img src={`https://employee-database-9v1y.onrender.com/uploads/${emp.image}`} alt="Employee" />
 
                     </td>
                   <td>{emp.employeeName}</td>

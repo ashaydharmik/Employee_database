@@ -64,7 +64,7 @@ const AddEmployee = () => {
     };
 
     axios
-      .post("http://localhost:4000/addEmployee", formData, { headers })
+      .post("https://employee-database-9v1y.onrender.com/addEmployee", formData, { headers })
       .then((response) => {
         console.log(formData);
         setEmpData(initialValue);
